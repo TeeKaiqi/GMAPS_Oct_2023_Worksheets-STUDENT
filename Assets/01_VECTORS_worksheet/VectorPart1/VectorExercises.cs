@@ -16,6 +16,7 @@ public class VectorExercises : MonoBehaviour
 
     private void Start()
     {
+        Question2a(); 
         if (Q2a)
             Question2a();
         if (Q2b)
@@ -41,7 +42,16 @@ public class VectorExercises : MonoBehaviour
 
     void Question2a()
     {
+        startPt = new Vector2(0, 0); //states the starting coordinates of the line
+        endPt = new Vector2(2, 3); //states the end coordinates of the line
 
+        drawnLine = lineFactory.GetLine(startPt, endPt, 0.02f, Color.black); //gets an active line with the start and end points, thickness and colour
+
+        drawnLine.EnableDrawing(true); //enable the line
+
+        Vector2 vec2 = endPt - startPt; //calculates magnitude
+
+        Debug.Log("Magnitude = " + vec2.magnitude); //prints magnitude 
     }
 
     void Question2b(int n)
