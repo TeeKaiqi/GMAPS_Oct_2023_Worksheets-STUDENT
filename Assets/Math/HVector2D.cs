@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
 
-//[Serializable]
+[Serializable]
 public class HVector2D
 {
     public float x, y;
@@ -30,45 +31,46 @@ public class HVector2D
         h = 1.0f;
     }
 
-    // public static HVector2D operator +( /*???*/)
-    // {
+    public static HVector2D operator +(HVector2D a, HVector2D b)
+    {
+        return new HVector2D(a.x + b.x, a.y + b.y);
+    }
 
-    // }
+    public static HVector2D operator -(HVector2D a, HVector2D b)
+    {
+        return new HVector2D(a.x - b.x, a.y - b.y);
+    }
 
-    // public static HVector2D operator -(/*???*/)
-    // {
+    public static HVector2D operator *(HVector2D a, HVector2D b)
+    {
+        return new HVector2D(a.x * b.x, a .y * b.y);
+    }
 
-    // }
+    public static HVector2D operator /(HVector2D a, HVector2D b)
+    {
+        return new HVector2D(a.x / b.x, a.y / b.y);
+    }
 
-    // public static HVector2D operator *(/*???*/)
-    // {
+    public float Magnitude()
+    {
 
-    // }
+    }
 
-    // public static HVector2D operator /(/*???*/)
-    // {
-
-    // }
-
-    // public float Magnitude()
-    // {
-
-    // }
-
-    // public void Normalize()
-    // {
-
-    // }
+    public void Normalize()
+    {
+        float mag = Magnitude();
+        x/= mag;
+        y/= mag;
+    }
 
     // public float DotProduct(/*???*/)
     // {
 
     // }
 
-    // public HVector2D Projection(/*???*/)
-    // {
-
-    // }
+    public HVector2D Projection(HVector2D b)
+    {
+    }
 
     // public float FindAngle(/*???*/)
     // {

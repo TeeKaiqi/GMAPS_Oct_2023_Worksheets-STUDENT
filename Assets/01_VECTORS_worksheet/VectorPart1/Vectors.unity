@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 1000013289361224, guid: 67db316532143b248b19bb424019b871, type: 3}
-  maxLines: 1
+  maxLines: 20
 --- !u!4 &240452311
 Transform:
   m_ObjectHideFlags: 0
