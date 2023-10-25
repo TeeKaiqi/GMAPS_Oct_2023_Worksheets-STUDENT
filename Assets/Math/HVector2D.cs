@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Unity.VisualScripting;
+using Unity.Mathematics;
 
 [Serializable]
 public class HVector2D
@@ -43,7 +44,12 @@ public class HVector2D
 
     public static HVector2D operator *(HVector2D a, HVector2D b)
     {
-        return new HVector2D(a.x * b.x, a .y * b.y);
+        return new HVector2D(a.x * b.x, a.y * b.y);
+    }
+
+    public static HVector2D operator *(HVector2D a, float b)
+    {
+        return new HVector2D(a.x * b, a.y * b);
     }
 
     public static HVector2D operator /(HVector2D a, HVector2D b)
@@ -51,40 +57,48 @@ public class HVector2D
         return new HVector2D(a.x / b.x, a.y / b.y);
     }
 
+    public static HVector2D operator /(HVector2D a, float b)
+    {
+        return new HVector2D(a.x / b, a.y / b);
+    }
     public float Magnitude()
     {
-
+        return Mathf.Sqrt((x * x) + (y * y));
     }
 
-    public void Normalize()
+    public HVector2D Normalize()
     {
         float mag = Magnitude();
-        x/= mag;
-        y/= mag;
+        x /= mag;
+        y /= mag;
+        return new HVector2D(x, y);
+
     }
 
-    // public float DotProduct(/*???*/)
-    // {
-
-    // }
+    public float DotProduct(HVector2D vec)
+    {
+        return (x * vec.x + y * vec.y);
+    }
 
     public HVector2D Projection(HVector2D b)
     {
+        HVector2D proj = b * (DotProduct(b) / b.DotProduct(b));
+        return proj;
     }
 
-    // public float FindAngle(/*???*/)
-    // {
-
-    // }
+    public float FindAngle(HVector2D vec)
+    {
+        return (float)Mathf.Acos(DotProduct(vec) / (Magnitude() * vec.Magnitude()));
+    }
 
     public Vector2 ToUnityVector2()
     {
-        return Vector2.zero; // change this
+        return Vector2.zero;
     }
 
     public Vector3 ToUnityVector3()
     {
-        return Vector2.zero; // change this
+        return new Vector3(x, y, 0);
     }
 
     // public void Print()
