@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44380236, g: 0.49315476, b: 0.5726765, a: 1}
+  m_IndirectSpecularColor: {r: 0.44380197, g: 0.49315435, b: 0.57267565, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -155,6 +155,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e2d3d970781d48baa172c8e8a6935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCaptain: 0
+  OtherPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotationSpeed: 1
 --- !u!136 &180692088
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -266,6 +277,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e2d3d970781d48baa172c8e8a6935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCaptain: 1
+  OtherPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotationSpeed: 1
 --- !u!136 &200578738
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -667,6 +689,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e2d3d970781d48baa172c8e8a6935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCaptain: 0
+  OtherPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotationSpeed: 1
 --- !u!136 &943914672
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -778,6 +811,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e2d3d970781d48baa172c8e8a6935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCaptain: 0
+  OtherPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotationSpeed: 1
 --- !u!136 &1024180121
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -889,6 +933,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e2d3d970781d48baa172c8e8a6935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCaptain: 0
+  OtherPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotationSpeed: 1
 --- !u!136 &1099839455
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1000,6 +1055,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e2d3d970781d48baa172c8e8a6935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCaptain: 0
+  OtherPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotationSpeed: 1
 --- !u!136 &1400767176
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1235,6 +1301,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e2d3d970781d48baa172c8e8a6935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCaptain: 0
+  OtherPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotationSpeed: 1
 --- !u!136 &1731149086
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1312,7 +1389,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1690110630}
-  m_RootOrder: 3
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1869517076
 GameObject:
@@ -1346,6 +1423,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94e2d3d970781d48baa172c8e8a6935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCaptain: 0
+  OtherPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotationSpeed: 1
 --- !u!136 &1869517078
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1452,11 +1540,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961090142}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d94e2d3d970781d48baa172c8e8a6935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsCaptain: 0
+  OtherPlayers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rotationSpeed: 1
 --- !u!136 &1961090144
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1535,4 +1634,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1690110630}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2021296607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2021296609}
+  - component: {fileID: 2021296608}
+  m_Layer: 0
+  m_Name: TestMatrix
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2021296608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021296607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0163c57727863ee49870dfb86b1e40cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2021296609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021296607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.9999999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
