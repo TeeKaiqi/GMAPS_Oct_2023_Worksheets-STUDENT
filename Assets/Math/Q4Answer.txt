@@ -1,0 +1,6 @@
+i) The awake function fects the component meshfilter that is attached to the same game object. It then fetches the original mesh and makes the sharedMesh a reference to the original mesh. 
+It then creates a new mesh called clonerd mesh and sets the name to clone. It copies the vertices, triangle vertices, normals, uvs, mesh from the original to the clone and stores references 
+to them.
+
+ii) If you don't clone the mesh, all other game objects using the same mesh will be affected and have the same changes done to them. The original data of the mesh wont be kept, which could
+be troublesome. 

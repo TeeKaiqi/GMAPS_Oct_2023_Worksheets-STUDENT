@@ -184,7 +184,9 @@ public class HMatrix2D
 
     public void SetTranslationMat(float transX, float transY)
     {
-        // your code here
+        SetIdentity();
+        Entries[0,2] = transX;
+        Entries[1,2] = transY;
     }
 
     public void SetRotationMat(float rotDeg)
