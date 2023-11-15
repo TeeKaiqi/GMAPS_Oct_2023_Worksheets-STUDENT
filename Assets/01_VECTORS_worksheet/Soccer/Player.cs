@@ -46,20 +46,20 @@ public class Player : MonoBehaviour
         return Mathf.Acos(Vector3.Dot(vectorA.normalized, vectorB.normalized)) * Mathf.Rad2Deg;
 
 
-        // A
-        // Steps to draw the arrow that represents the vector from Captain to Other 
-        // 1. Find the vector from Captain to Other
-        //     1.1 Find the position of Captain (A -- from)
-        //     1.2 Find the position of Other (B -- to)
-        //     1.3 Calculate B-A to get the vector from A to B
-        // 2. Draw the arrow to represent visually the vector AB
-        DebugExtension.DebugArrow(transform.position, OtherPlayer.transform.position - transform.position, Color.black);
-        // B
-        // Steps to draw an arrow that represents which direction Captain is facing
-        // 1. Find which vector to draw as an arrow
-        //    1.1 The transform.forward vector of Captain
-        // 2. Draw the arrow to represent visually the the transform.forward vector of Captain
-        DebugExtension.DebugArrow(transform.position, transform.forward, Color.blue);
+        //// A
+        //// Steps to draw the arrow that represents the vector from Captain to Other 
+        //// 1. Find the vector from Captain to Other
+        ////     1.1 Find the position of Captain (A -- from)
+        ////     1.2 Find the position of Other (B -- to)
+        ////     1.3 Calculate B-A to get the vector from A to B
+        //// 2. Draw the arrow to represent visually the vector AB
+        //DebugExtension.DebugArrow(transform.position, OtherPlayer.transform.position - transform.position, Color.black);
+        //// B
+        //// Steps to draw an arrow that represents which direction Captain is facing
+        //// 1. Find which vector to draw as an arrow
+        ////    1.1 The transform.forward vector of Captain
+        //// 2. Draw the arrow to represent visually the the transform.forward vector of Captain
+        //DebugExtension.DebugArrow(transform.position, transform.forward, Color.blue);
 
         
         // CALCULATING THE ANGLE
