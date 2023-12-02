@@ -26,8 +26,7 @@ public class Ball2D : MonoBehaviour
     {
         public static float FindDistance(HVector2D p1, HVector2D p2)
         {
-            //return Mathf.Sqrt(Mathf.Pow(p2.x-p1.x,2)+Mathf.Pow(p2.y-p1.y,2));
-            return Mathf.Sqrt((p2.x - p1.x * p2.x - p1.x) + (p2.y - p1.y * p2.y - p1.y));
+            return Mathf.Sqrt(p1.Magnitude() * p1.Magnitude() + p2.Magnitude() * p2.Magnitude());
         }
     }
     public bool IsCollidingWith(float x, float y)
