@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -20,10 +21,10 @@ public class PoolCue : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            var startLinePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // Start line drawing
-            if (ball != null && ball.IsCollidingWith(startLinePos.x, startLinePos.y))
+            var startLinePos = Camera.main.ScreenToWorldPoint (Input.mousePosition); // Start line drawing
+            if(ball != null && ball.IsCollidingWith(startLinePos.x, startLinePos.y))
             {
-                drawnLine = new Line();
+                drawnLine = lineFactory.GetLine(ball.Position.ToUnityVector3(), startLinePos, 2f, Color.red);
                 drawnLine.EnableDrawing(true);
             }
         }
@@ -32,15 +33,15 @@ public class PoolCue : MonoBehaviour
             drawnLine.EnableDrawing(false);
 
             //update the velocity of the white ball.
-            HVector2D v = new HVector2D(/*your code here*/);
-            //ball./*your code here*/ = v;
+            HVector2D v = new HVector2D(ball.Position.ToUnityVector3()- Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            ball.Position = v;
 
             drawnLine = null; // End line drawing            
         }
 
         if (drawnLine != null)
         {
-            //drawnLine.end = ;/*your code here*/// Update line end
+            drawnLine.end = Camera.main.ScreenToWorldPoint(Input.mousePosition); //Update line end
         }
     }
 
