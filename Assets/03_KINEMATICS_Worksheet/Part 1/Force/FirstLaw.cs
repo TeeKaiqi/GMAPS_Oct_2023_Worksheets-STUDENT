@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class FirstLaw : MonoBehaviour
 {
-    public Vector3 force;
+    public Vector3 force; //vector3 public property force
     Rigidbody rb;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        rb.AddForce(force, ForceMode.Impulse);
+        rb = GetComponent<Rigidbody>(); //get the rigidbody component
+        rb.AddForce(force, ForceMode.Impulse); //add impulse force once 
      }
 
     void FixedUpdate()
     {
-        Debug.Log(transform.position);
+        Debug.Log(transform.position); //prints the position of the sphere in the debug log
     }
 }
 

@@ -24,8 +24,8 @@ public class Ball2D : MonoBehaviour
 
     public bool IsCollidingWith(float x, float y)
     {
-        float distance = Util.FindDistance(new HVector2D(transform.position),new HVector2D(x,y));
-        return distance <= Radius;
+        float distance = Util.FindDistance(Position, new HVector2D(x,y)); //Calculates the distance between the ball and x,y using the finddistance from Util script
+        return distance <= Radius; //returns true if distance is smaller or equal to the radius, which means that the x,y is inside the ball
     }
 
     public bool IsCollidingWith(Ball2D other)
@@ -36,18 +36,18 @@ public class Ball2D : MonoBehaviour
 
     public void FixedUpdate()
     {
-        UpdateBall2DPhysics(Time.deltaTime);
+        UpdateBall2DPhysics(Time.deltaTime); 
     }
 
     private void UpdateBall2DPhysics(float deltaTime)
     {
-        float displacementX = Velocity.x * deltaTime;
-        float displacementY = Velocity.y * deltaTime;
+        float displacementX = Velocity.x * deltaTime; //calculates x axis displacement by multiplying the velocity x value by the delta time
+        float displacementY = Velocity.y * deltaTime; //calculates y axis displacement by multiplying the velocity y valye by the delta time
 
-        Position.x += displacementX;
-        Position.y += displacementY;
+        Position.x += displacementX; //adds the x axis displacement to position.x and makes that the new position.x value
+        Position.y += displacementY; //adds the y axis displacement to position.y and makes that the new position.y value
 
-        transform.position = new Vector2(Position.x, Position.y);
+        transform.position = new Vector2(Position.x, Position.y); //transforms position to the new x and y
     }
 }
 
